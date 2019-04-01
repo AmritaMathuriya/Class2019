@@ -7,7 +7,7 @@ Created on Sun Mar 31 14:43:05 2019
 
 import numpy as np
 
-N = input("Enter N: ")
+N = int(input("Enter N: "))
 X = np.zeros(N)
 
 print (X)
@@ -15,7 +15,7 @@ print (X)
 
 sum = 0
 for i in range (N):
-    X[i] = input("Please enter number: ")
+    X[i] = int(input("Please enter number: "))
     sum += X[i]
     
 avg = sum/N
