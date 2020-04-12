@@ -1,5 +1,6 @@
 
 num = input("Enter number: ")
+num = int(num)
 
 fact = 1
 
