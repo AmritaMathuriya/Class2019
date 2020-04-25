@@ -1,13 +1,13 @@
 
 N = 5
-
-for i in range (N):
+start = 0
+for i in range (start,N):
     print i
 
-
 print ()
-j = 0
-while ( j < 5 ):
+
+j = start
+while ( j < N ):
     print j
     j = j+1
 
