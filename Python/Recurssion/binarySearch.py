@@ -1,4 +1,5 @@
 
+# Function to do binary search in a sorted list. 
 def binary_search(list1,num):
 
     start = 0
@@ -10,14 +11,14 @@ def binary_search(list1,num):
         midIndex = (start + end ) // 2
         print ("midIndex: ", midIndex, " start = ", start, " end = ", end)
     
-        if list1[midIndex] == num :
+        if list1[midIndex] == num :  # found the number, break the loop by making found = True
             found = True
     
         else:
-            if num < list1[midIndex]:
+            if num < list1[midIndex]: # Search number is smaller than mid point - it should reside on the left side.
                 end = midIndex - 1
             else: 
-                start = midIndex + 1
+                start = midIndex + 1 # Search number is greater than mid point - it should reside on the right side.
 
     return found
 
