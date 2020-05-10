@@ -39,20 +39,39 @@ class Maze:
        for i in range (0, self.M):
         for j in range (0, self.N):
             value = randint(0, 10)
-            if value < 4:
+            if value < 0:
                 self.maze[i][j] = 0
 
+       for i in range(0, (self.N)//2):
+           self.maze[i][1] = 0        
+
+       for i in range(0, (self.M)//2):
+           self.maze[self.N//2][i] = 0     
+    
+       for i in range(0, (self.M)//2):
+           self.maze[i][8] = 0     
+
+       for i in range((self.N)//2-1, self.N):
+           self.maze[self.M//2][i] = 0      
+    
+       self.maze[1][2] = 0
+       self.maze[:][3] = 0
+       for i in range(0,self.N):
+            self.maze[i][18] = 0    
+
+       # Set the boundries as 1 to display the bricks on boundaries. 
+       self.maze[0][:] = 1
+       self.maze[self.M-1][:] = 1
 
        self.maze[0][:] = 1
-       #self.maze[:][0] = 1
        self.maze[self.M-1][:] = 1
-       #self.maze[:][self.N-1] = 1
-
 
        for i in range(self.N):
         self.maze[i][self.N-1]  = 1
         self.maze[i][0]  = 1
 
+       # Set the player's position and start and end bricks to 0  
+       self.maze[2][2] = 0
        self.maze[1][0] = 0 
        self.maze[self.M-1][self.N-2] = 0 
        self.maze[1][1] = 0 
