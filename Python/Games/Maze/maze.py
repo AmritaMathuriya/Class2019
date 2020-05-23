@@ -42,22 +42,38 @@ class Maze:
             if value < 0:
                 self.maze[i][j] = 0
 
-       for i in range(0, (self.N)//2):
-           self.maze[i][1] = 0        
+#       for i in range(0, (self.N)//2):
+#           self.maze[i][1] = 0        
 
-       for i in range(0, (self.M)//2):
-           self.maze[self.N//2][i] = 0     
+#       for i in range(0, (self.M)//2):
+#           self.maze[self.N//2][i] = 0     
     
-       for i in range(0, (self.M)//2):
-           self.maze[i][8] = 0     
+#       for i in range(0, (self.M)//2):
+#           self.maze[i][8] = 0     
 
-       for i in range((self.N)//2-1, self.N):
-           self.maze[self.M//2][i] = 0      
+#       for i in range((self.N)//2-1, self.N):
+#           self.maze[self.M//2][i] = 0      
     
        self.maze[1][2] = 0
-       self.maze[:][3] = 0
-       for i in range(0,self.N):
-            self.maze[i][18] = 0    
+       #self.maze[:][3] = 0
+
+       gSize = self.M
+
+#       randStartCol = np.random.randint(gSize-1 )+1 
+       randRow = np.random.randint(gSize-2 )+1 
+       print ( randRow )
+
+       for i in range(1,randRow):
+            self.maze[1][i] = 0    
+
+       randCol1 = np.random.randint(gSize-2 )+1 
+       print ( randCol1 )
+
+       for i in range(1,randCol1):
+            self.maze[i][gSize-1] = 0    
+
+#       for i in range(randRow,self.M):
+#            self.maze[randEndCol][i] = 0    
 
        # Set the boundries as 1 to display the bricks on boundaries. 
        self.maze[0][:] = 1
