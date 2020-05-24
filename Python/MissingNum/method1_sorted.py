@@ -5,3 +5,4 @@ n = len(arr)+1
 for i in range(1, n):
     if i != arr[i-1]:
         print (i)
+        break
