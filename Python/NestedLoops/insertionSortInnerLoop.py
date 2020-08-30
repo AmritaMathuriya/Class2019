@@ -3,7 +3,7 @@ def swap (p1, p2, list1):
     list1[p1] = list1[p2]
     list1[p2] = temp
 
-list1 = [2, 3, 4, 10, 12, 5]
+list1 = [2, 3, 4, 10, 12, 1]
 len1 = len(list1)
 
 
