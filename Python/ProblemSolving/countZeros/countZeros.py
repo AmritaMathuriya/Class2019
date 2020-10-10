@@ -17,7 +17,7 @@ def main():
     fOut = open ("output.txt", "w")
     
     numTests = int(fIn.readline())
-    print (numTests)
+    print ("Number of tests: ", numTests)
 
     for i in range(numTests):
         N = int( fIn.readline() )
